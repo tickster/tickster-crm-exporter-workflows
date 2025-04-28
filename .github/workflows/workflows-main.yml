@@ -1,0 +1,9 @@
+name: "Workflow dispatcher for reusable workflows"
+
+on:
+    workflow_call:
+
+jobs:
+    call-main:
+        uses: ./.github/workflows/main.yml
+        secrets: inherit

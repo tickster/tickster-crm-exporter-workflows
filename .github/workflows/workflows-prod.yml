@@ -1,0 +1,15 @@
+name: "Workflow dispatcher for reusable workflows (prod)"
+
+on:
+    workflow_call:
+
+jobs:
+    call-uat:
+        uses: ./.github/workflows/main_fa-crm-exporter-uat.yml
+        secrets: inherit
+    call-895:
+        uses: ./.github/workflows/prod_fa-crmexp-895-prod.yml
+        secrets: inherit
+    call-5072:
+        uses: ./.github/workflows/prod_fa-crmexp-5072-prod.yml
+        secrets: inherit
